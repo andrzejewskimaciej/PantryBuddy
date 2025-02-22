@@ -1,0 +1,65 @@
+package GUI;
+
+import Tests.TestPopup;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import static Features.SearchByName.*;
+
+public class FavoritesPane extends JPanel implements ActionListener {
+
+    private static final JButton searchByNameButton = new JButton("Search");
+    private static final JTextField searchByNameTextF = new JTextField(20);
+    JScrollPane scrollMealsListPanel;
+
+    public FavoritesPane() {
+
+        this.setLayout(new BorderLayout(0, 0));
+
+        JPanel searchPanel = new JPanel(new BorderLayout(20, 20));
+        this.add(searchPanel, BorderLayout.NORTH);
+        scrollMealsListPanel = new JScrollPane();
+        this.add(scrollMealsListPanel, BorderLayout.CENTER);
+        scrollMealsListPanel.getVerticalScrollBar().setUnitIncrement(20);
+
+
+        JPanel searchByNamePanel = new JPanel();
+        searchPanel.add(searchByNamePanel, BorderLayout.CENTER);
+
+        searchByNamePanel.add(searchByNameTextF, BorderLayout.CENTER);
+        JPanel searchButtonsPanel = new JPanel(new FlowLayout());
+        searchButtonsPanel.add(searchByNameButton);
+        searchByNamePanel.add(searchButtonsPanel);
+        searchByNameTextF.addActionListener(this);
+        searchByNameButton.addActionListener(this);
+        searchMeals();
+
+        setVisible(true);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (searchByNameButton.equals(e.getSource()) || searchByNameTextF.equals(e.getSource())) {
+            searchMeals();
+        }
+    }
+
+    private void searchMeals (){
+        clearList();
+        ResultSet rs = GetOnlyFavourites(searchByNameTextF);
+        try {
+            MealOnList.displaySearchedMeals(this, rs, scrollMealsListPanel);
+        } catch (SQLException ex) {
+            throw new RuntimeException(ex);
+        }
+    }
+
+    public static void main(String[] args) {
+        TestPopup.testComponent(new FavoritesPane());
+    }
+}

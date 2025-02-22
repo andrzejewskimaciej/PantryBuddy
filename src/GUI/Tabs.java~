@@ -1,0 +1,15 @@
+package GUI;
+
+import GUI.AddMealPane.AddNewMealRecipePane;
+
+import javax.swing.*;
+
+public class Tabs extends JTabbedPane {
+//    TODO: Dodać pozostałe karty
+    public Tabs() {
+        super(JTabbedPane.LEFT, JTabbedPane.SCROLL_TAB_LAYOUT);
+        addTab("Let's cook", new LetsCookPane());
+        addTab("Browse meals", new SearchPane());
+        addTab("Add recipe", new AddNewMealRecipePane());
+    }
+}

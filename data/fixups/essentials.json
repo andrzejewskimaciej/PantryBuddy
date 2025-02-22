@@ -1,0 +1,41 @@
+{
+  "All": [
+    "vegetables", "tomato", "aubergine", "fennel", "onion",
+    "courgettes", "yellow pepper", "red pepper", "green pepper", "celery", "lentils", "potatoes",
+    "leek", "mushrooms", "broccoli", "lemons", "baked beans", "bean sprouts", "black beans", "borlotti beans",
+    "broad beans", "butter beans", "cannellini beans", "fermented black beans", "green beans", "haricot beans",
+    "kidney beans", "refried beans", "squash", "spring onion",
+    "goat meat",
+    "salmon", "white fish", "monkfish", "red snapper", "anchovy fillet", "herring",
+    "haddock", "prawns", "tuna", "cod", "sardines", "mackerel", "squid",
+    "beef", "beef fillet", "beef brisket", "beef stock", "beef shin", "oxtail", "chorizo",
+    "chicken", "chicken breast", "chicken thigh",
+    "pork", "pork chops", "sausages", "ham", "bacon", "italian fennel sausages",
+    "lamb", "doner meat", "lamb loin chops", "lamb leg", "lamb shoulder",
+    "spaghetti", "rigatoni", "lasagne sheets", "fettuccine",
+    "bowtie pasta", "linguine pasta", "paccheri pasta", "tomato", "macaroni",
+    "sugar", "brown sugar", "flour", "honey", "caster sugar", "icing sugar",
+    "eggs"
+  ],
+  "Dessert": [
+    "miniature marshmallows", "chocolate chips", "vanilla extract", "vanilla", "double cream", "mars bar", "caramel"
+  ],
+  "Beef": [
+  ],
+  "Vegetarian": [
+  ],
+  "Chicken": [
+  ],
+  "Seafood": [
+  ],
+  "Pork": [
+  ],
+  "Lamb": [
+  ],
+  "Pasta": [
+  ],
+  "Goat": [
+  ],
+  "Vegan": [
+  ]
+}
